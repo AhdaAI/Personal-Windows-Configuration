@@ -1,0 +1,42 @@
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    # ----- VS Code -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vscode # Change this, it's a unique identifier
+      directive:
+        description: Install Visual Studio Code from winget source
+        allowPrerelease: false
+      settings:
+        id: Microsoft.VisualStudioCode # Change this to the correct winget id
+        Source: winget
+    
+    # ----- Google Chrome -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: chrome # Change this, it's a unique identifier
+      directive:
+        description: Install Google Chrome from winget source
+        allowPrerelease: false
+      settings:
+        id: Google.Chrome # Change this to the correct winget id
+        Source: winget
+    
+    # ----- PowerToys -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: powertoys # Change this, it's a unique identifier
+      directive:
+        description: Install PowerToys from winget source
+        allowPrerelease: false
+      settings:
+        id: Microsoft.PowerToys # Change this to the correct winget id
+        Source: winget
+    
+    # ----- Git -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: git
+      directive:
+        description: Install git from winget source
+        allowPrerelease: false
+      settings:
+        id: Git.Git
+        Source: winget
