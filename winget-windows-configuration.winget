@@ -1,16 +1,9 @@
+# Winget Configuration File
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
 properties:
   configurationVersion: 0.2.0
   resources:
-    # ----- VS Code -----
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: vscode # Change this, it's a unique identifier
-      directive:
-        description: Install Visual Studio Code from winget source
-        allowPrerelease: false
-      settings:
-        id: Microsoft.VisualStudioCode # Change this to the correct winget id
-        Source: winget
-    
     # ----- Google Chrome -----
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: chrome # Change this, it's a unique identifier
@@ -29,6 +22,37 @@ properties:
         allowPrerelease: false
       settings:
         id: Microsoft.PowerToys # Change this to the correct winget id
+        Source: winget
+    
+    # ----- Obsidian -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: obsidian
+      directive:
+        description: Install Obsidian from winget source
+        allowPrerelease: false
+      settings:
+        id: Obsidian.Obsidian
+        Source: winget
+    
+    # ----- Discord -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: discord
+      directives:
+        description: Install Discord from winget source
+        allowPrerelease: false
+      settings:
+        id: Discord.Discord
+        Source: winget
+    
+    # ---------- Basic Programming Software ----------
+    # ----- VS Code -----
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vscode # Change this, it's a unique identifier
+      directive:
+        description: Install Visual Studio Code from winget source
+        allowPrerelease: false
+      settings:
+        id: Microsoft.VisualStudioCode # Change this to the correct winget id
         Source: winget
     
     # ----- Git -----
